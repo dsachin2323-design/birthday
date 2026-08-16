@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7efe6">
+  <meta name="description" content="A little birthday garden made with love.">
+  <title>A Little Garden For You 🌸</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="petal-layer" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- LANDING / SECRET GATE -->
+  <section id="gate" class="screen gate-screen">
+    <div class="garden-corner garden-left" aria-hidden="true">🌿</div>
+    <div class="garden-corner garden-right" aria-hidden="true">🌿</div>
+    <div class="gate-content reveal">
+      <p class="eyebrow">A little secret garden</p>
+      <h1>For someone<br><em>very special</em> ♡</h1>
+      <p class="gate-subtitle">There is a little world waiting for you inside.</p>
+
+      <div class="countdown-card">
+        <span class="countdown-label">Until your special day</span>
+        <div id="gateCountdown" class="countdown" aria-live="polite">
+          <div><strong>00</strong><small>days</small></div>
+          <i>:</i><div><strong>00</strong><small>hours</small></div>
+          <i>:</i><div><strong>00</strong><small>minutes</small></div>
+          <i>:</i><div><strong>00</strong><small>seconds</small></div>
+        </div>
+      </div>
+
+      <form id="secretForm" class="secret-form">
+        <label for="secret">The secret word</label>
+        <div class="secret-row">
+          <input id="secret" type="password" autocomplete="off" placeholder="Only you know this…" required>
+          <button type="submit">Enter ♡</button>
+        </div>
+        <p id="gateHint" class="gate-hint">Hint: <span id="hintText"></span></p>
+      </form>
+      <p class="tiny-note">Made especially for you · <span id="gateYear"></span></p>
+    </div>
+  </section>
+
+  <!-- MAIN EXPERIENCE -->
+  <main id="world" class="hidden">
+    <header class="nav">
+      <a class="brand" href="#top">♡ <span>Our Little Garden</span></a>
+      <nav>
+        <a href="#story">Our Story</a>
+        <a href="#memories">Memories</a>
+        <a href="#letter">Letter</a>
+        <a href="#countdown">Countdown</a>
+      </nav>
+      <button id="musicToggle" class="icon-btn" type="button" aria-label="Toggle music">♫</button>
+    </header>
+
+    <section id="top" class="hero section">
+      <div class="hero-bloom bloom-one"></div>
+      <div class="hero-bloom bloom-two"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Today is all about you</p>
+        <h2>Happy Birthday<br><em id="heroName">My Love</em> ♡</h2>
+        <p id="heroIntro">You make ordinary days feel like something worth remembering.</p>
+        <a class="primary-btn" href="#story">Let's begin <span>→</span></a>
+      </div>
+      <div class="hero-photo photo-frame parallax" data-speed="0.08">
+        <div class="photo-placeholder">
+          <span>YOUR<br>PHOTO</span>
+          <small>photos/hero.jpg</small>
+        </div>
+      </div>
+      <div class="scroll-cue">scroll gently ↓</div>
+    </section>
+
+    <section id="story" class="section paper-section">
+      <div class="section-heading">
+        <span>01</span>
+        <div><p class="eyebrow">Chapter one</p><h3>The day our story began</h3></div>
+      </div>
+      <div class="story-grid">
+        <div class="story-copy">
+          <p class="large-copy">Somehow, among all the people and all the days, <em>we found each other.</em></p>
+          <p id="storyText">Replace this with the story of how you met, your first conversation, your first date, or the moment you knew she was special.</p>
+          <div class="pressed-flower">✿</div>
+        </div>
+        <div class="polaroid rotate-left">
+          <div class="photo-placeholder"><span>YOUR<br>PHOTO</span><small>photos/story.jpg</small></div>
+          <p>The beginning ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="memories" class="section memories-section">
+      <div class="section-heading centered">
+        <span>02</span>
+        <div><p class="eyebrow">Little pieces of us</p><h3>Moments I'll keep forever</h3></div>
+      </div>
+      <div class="memory-grid">
+        <button class="memory-card tilt" data-photo="photos/memory1.jpg" data-caption="A memory I'll always keep." type="button">
+          <div class="photo-placeholder"><span>PHOTO 01</span><small>photos/memory1.jpg</small></div><b>one of my favorites</b>
+        </button>
+        <button class="memory-card tilt" data-photo="photos/memory2.jpg" data-caption="That day was special because you were there." type="button">
+          <div class="photo-placeholder"><span>PHOTO 02</span><small>photos/memory2.jpg</small></div><b>that little moment</b>
+        </button>
+        <button class="memory-card tilt" data-photo="photos/memory3.jpg" data-caption="A tiny moment that became a big memory." type="button">
+          <div class="photo-placeholder"><span>PHOTO 03</span><small>photos/memory3.jpg</small></div><b>just us</b>
+        </button>
+        <button class="memory-card tilt" data-photo="photos/memory4.jpg" data-caption="Another page from our story." type="button">
+          <div class="photo-placeholder"><span>PHOTO 04</span><small>photos/memory4.jpg</small></div><b>another chapter</b>
+        </button>
+        <button class="memory-card tilt" data-photo="photos/memory5.jpg" data-caption="One more reason to smile." type="button">
+          <div class="photo-placeholder"><span>PHOTO 05</span><small>photos/memory5.jpg</small></div><b>that smile</b>
+        </button>
+        <button class="memory-card tilt" data-photo="photos/memory6.jpg" data-caption="And there are still so many memories to make." type="button">
+          <div class="photo-placeholder"><span>PHOTO 06</span><small>photos/memory6.jpg</small></div><b>to be continued…</b>
+        </button>
+      </div>
+    </section>
+
+    <section id="letter" class="section letter-section">
+      <div class="envelope-wrap">
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div>
+          <div class="letter-paper">
+            <p class="eyebrow">A letter, just for you</p>
+            <h3>Things I don't say enough…</h3>
+            <p id="letterText">Write your real birthday message here. Keep it honest, personal and a little silly if that is how the two of you talk.</p>
+            <p class="signature">Always yours ♡</p>
+          </div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <button id="openLetter" type="button" class="envelope-button">Open my letter ♡</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="countdown" class="section countdown-section">
+      <div class="countdown-copy">
+        <p class="eyebrow">The big day</p>
+        <h3>Counting down<br>to <em>you</em></h3>
+        <p>Because one day deserves to be celebrated properly.</p>
+      </div>
+      <div class="big-countdown" id="bigCountdown">
+        <div><strong>00</strong><span>days</span></div>
+        <div><strong>00</strong><span>hours</span></div>
+        <div><strong>00</strong><span>minutes</span></div>
+        <div><strong>00</strong><span>seconds</span></div>
+      </div>
+    </section>
+
+    <section class="section reasons-section">
+      <div class="section-heading centered">
+        <span>03</span>
+        <div><p class="eyebrow">A few unfair advantages you have</p><h3>Reasons you're so special</h3></div>
+      </div>
+      <div class="reasons-grid">
+        <button type="button" class="reason"><span>01</span><b>Your smile</b><small>It changes the whole mood.</small></button>
+        <button type="button" class="reason"><span>02</span><b>Your laugh</b><small>Especially when you try not to laugh.</small></button>
+        <button type="button" class="reason"><span>03</span><b>The way you care</b><small>Quietly, deeply, completely you.</small></button>
+        <button type="button" class="reason"><span>04</span><b>Your weirdness</b><small>Yes. Even that. 😂</small></button>
+        <button type="button" class="reason"><span>05</span><b>Simply you</b><small>There really is no replacement.</small></button>
+      </div>
+    </section>
+
+    <section class="section final-section">
+      <div class="final-photo photo-frame">
+        <div class="photo-placeholder"><span>BEST<br>PHOTO</span><small>photos/final.jpg</small></div>
+      </div>
+      <div class="final-copy">
+        <p class="eyebrow">One last thing</p>
+        <h3>Thank you for<br><em>being you.</em></h3>
+        <p id="finalText">I hope this little garden reminds you that you are loved, celebrated, and deeply appreciated.</p>
+        <button id="surpriseButton" class="primary-btn" type="button">Open your surprise 🎁</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Made with ridiculous amounts of love ♡</p>
+      <p>Happy Birthday, <span id="footerName">My Love</span>.</p>
+    </footer>
+  </main>
+
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
+    <button id="closeLightbox" class="close-btn" type="button">×</button>
+    <div class="lightbox-inner">
+      <div id="lightboxPhoto" class="lightbox-photo"></div>
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <div id="surpriseOverlay" class="surprise-overlay hidden">
+    <div class="surprise-card">
+      <div class="gift">🎁</div>
+      <p class="eyebrow">For you</p>
+      <h3>Happy Birthday,<br><em id="surpriseName">my love</em> ♡</h3>
+      <p>May this year bring you beautiful places, ridiculous laughter, peaceful mornings, and everything your heart has been quietly wishing for.</p>
+      <button id="closeSurprise" class="primary-btn" type="button">Keep this little secret ♡</button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop preload="none">
+    <source src="music/birthday-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
